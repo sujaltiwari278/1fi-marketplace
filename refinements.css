@@ -1,0 +1,46 @@
+/* Final visual refinements requested for the Shop hero, location selector, and product media. */
+.shop-hero {
+  aspect-ratio: 16 / 9;
+  background-color: #1b191d;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.location-picker {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 13px;
+  border: 1px solid #ddccff;
+  border-radius: 999px;
+  background: #fff;
+  color: #6d29df;
+  font: 700 12px "DM Sans", sans-serif;
+  letter-spacing: 0.1px;
+  box-shadow: 0 2px 6px rgba(95, 32, 211, 0.05);
+}
+
+.location-picker::after {
+  width: 7px;
+  height: 7px;
+  margin-top: -3px;
+  border-right: 1.8px solid currentColor;
+  border-bottom: 1.8px solid currentColor;
+  content: "";
+  transform: rotate(45deg);
+}
+
+.detail-image {
+  height: 320px;
+  background: #f4efff;
+}
+
+.detail-image img {
+  height: 100%;
+  padding: 14px;
+  object-fit: contain;
+  object-position: center;
+  mix-blend-mode: normal;
+}

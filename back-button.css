@@ -1,0 +1,23 @@
+.detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding: 10px 13px;
+  border: 1px solid #e2d8f5;
+  border-radius: 14px;
+  background: #fff;
+  color: #5f20d3;
+  font: 700 13px "DM Sans", sans-serif;
+  box-shadow: 0 3px 10px rgba(45, 16, 91, 0.06);
+}
+
+.detail-back span {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.detail-back:focus-visible {
+  outline: 3px solid #bd9bff;
+  outline-offset: 3px;
+}

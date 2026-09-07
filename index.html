@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#4d16ba" />
+    <title>1Fi Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="refinements.css" />
+    <link rel="stylesheet" href="back-button.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <button class="icon-button back-button" id="backButton" aria-label="Go back" hidden>‹</button>
+        <div><p class="eyebrow">SHOP WITH 1FI</p><h1 id="pageTitle">Shop</h1></div>
+        <button class="icon-button" aria-label="Shopping bag">⌑</button>
+      </header>
+
+      <section id="shopView">
+        <section class="shop-hero" aria-label="Shop today, pay later using mutual funds"></section>
+        <div class="segmented-control" role="tablist" aria-label="Shop options">
+          <button class="active" id="brandsTab" role="tab" data-shop-tab="brands" aria-controls="brandsPanel" aria-selected="true">Top Brands</button><button id="nearbyTab" role="tab" data-shop-tab="nearby" aria-controls="nearbyPanel" aria-selected="false">Nearby Stores</button><button id="marketplaceTab" role="tab" data-shop-tab="marketplace" aria-controls="marketplacePanel" aria-selected="false">Marketplace</button>
+        </div>
+        <section id="brandsPanel" class="shop-panel" role="tabpanel" aria-labelledby="brandsTab"><label class="search"><span>⌕</span><input id="brandSearchInput" type="search" placeholder="Search online stores..." autocomplete="off" /></label><h2 class="panel-title">Top Brands</h2><div class="brand-list" id="brandList"></div></section>
+        <section id="nearbyPanel" class="shop-panel nearby-panel" role="tabpanel" aria-labelledby="nearbyTab" hidden><label class="search"><span>⌕</span><input id="storeSearchInput" type="search" placeholder="Search stores..." autocomplete="off" /></label><div class="nearby-heading"><h2 class="panel-title">Nearby Stores</h2><button class="location-picker" type="button" aria-label="Selected location: Bengaluru Urban" aria-expanded="false">Bengaluru Urban</button></div><div class="nearby-list" id="nearbyList" aria-live="polite"></div></section>
+        <section id="marketplacePanel" class="shop-panel" role="tabpanel" aria-labelledby="marketplaceTab" hidden><section class="hero-card"><div><p class="eyebrow">EXCLUSIVELY FOR YOU</p><h2>Buy today,<br><em>pay later.</em></h2><p>Choose no-cost EMI plans backed by your mutual funds.</p></div><div class="hero-art" aria-hidden="true"><span>0%</span><strong>NO-COST<br>EMI</strong></div></section><label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Search products" autocomplete="off" /></label><div class="category-row" id="categoryRow" aria-label="Product categories"></div><section class="section-heading"><div><p class="eyebrow">CURATED FOR YOU</p><h2>Popular products</h2></div><button class="text-button" id="clearFilter" type="button" hidden>Clear</button></section><p class="status" id="statusMessage" aria-live="polite">Finding the best offers for you…</p><div class="product-grid" id="productGrid" aria-busy="true"></div></section>
+      </section>
+
+      <section id="productView" hidden></section>
+      <section id="successView" hidden class="success-view"><div class="success-mark">✓</div><p class="eyebrow">PLAN RESERVED</p><h2>Your no-cost EMI plan is ready.</h2><p id="successText"></p><button class="primary-button" id="shopMore">Continue shopping</button></section>
+
+      <nav class="bottom-nav" aria-label="Main navigation"><button>⌂<span>Home</span></button><button class="active">♜<span>Shop</span></button><button>▣<span>EMI Dues</span></button><button>⌁<span>Limit</span></button><button>♙<span>Profile</span></button></nav>
+    </main>
+    <template id="productCardTemplate"><article class="product-card"><button class="product-card-button"><div class="product-image"></div><div class="product-copy"><p class="brand"></p><h3></h3><p class="price"></p><p class="emi-copy"></p></div></button></article></template>
+    <script src="app.js"></script>
+  </body>
+</html>
